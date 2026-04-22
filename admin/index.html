@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Login — GoDirect247</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config={theme:{extend:{colors:{dark:'#191c1f',gold:'#f3cc20','gold-dark':'#c9a800',brand:'#0682B4',surface:'#f4f4f4',teal:'#00a87e',danger:'#e23b4a',muted:'#8d969e',slate:'#505a63'},fontFamily:{display:['Plus Jakarta Sans','sans-serif']}}}}
+  </script>
+  <style>
+    *{-webkit-font-smoothing:antialiased}
+    body{font-family:'Inter',sans-serif}
+    .font-display{font-family:'Plus Jakarta Sans',sans-serif}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+    .ani1{animation:fadeUp .6s ease 0s both}.ani2{animation:fadeUp .6s ease .1s both}
+    .ani3{animation:fadeUp .6s ease .2s both}.ani4{animation:fadeUp .6s ease .3s both}
+    .ani5{animation:fadeUp .6s ease .45s both}
+    input,select,textarea{outline:none}
+    input:focus,select:focus,textarea:focus{box-shadow:0 0 0 2px #f3cc20}
+  </style>
+</head>
+<body class="bg-dark min-h-screen flex items-center justify-center px-5">
+<div class="w-full max-w-sm">
+  <div class="text-center mb-10 ani1">
+    <div class="font-display font-extrabold text-white text-2xl mb-1">Go<span class="text-gold">Direct</span>247</div>
+    <p class="text-white/40 text-sm">Admin portal</p>
+  </div>
+  <div class="ani2 bg-white/[0.06] border border-white/10 rounded-2xl p-7">
+    <h1 class="font-display font-extrabold text-white text-xl mb-6">Sign in</h1>
+    <div class="space-y-4 mb-6">
+      <div>
+        <label class="text-white/50 text-xs font-semibold uppercase tracking-wide block mb-2">Email</label>
+        <input type="email" placeholder="admin@godirect247.co.za" class="w-full bg-white/10 border border-white/15 rounded-xl px-4 py-3.5 text-white placeholder-white/30 text-sm">
+      </div>
+      <div>
+        <label class="text-white/50 text-xs font-semibold uppercase tracking-wide block mb-2">Password</label>
+        <input type="password" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;" class="w-full bg-white/10 border border-white/15 rounded-xl px-4 py-3.5 text-white placeholder-white/30 text-sm">
+      </div>
+    </div>
+    <a href="dashboard.html" class="block w-full text-center bg-gold text-dark font-display font-bold py-4 rounded-full hover:bg-gold-dark transition-all text-sm">Sign in to admin</a>
+  </div>
+  <p class="text-center text-white/30 text-xs mt-6"><a href="../index.html" class="hover:text-white/60 transition-colors">Back to website</a></p>
+</div>
+</body>
+</html>
