@@ -1,0 +1,91 @@
+'use client';
+
+import Link from 'next/link';
+import { useState } from 'react';
+import { List, X } from '@phosphor-icons/react';
+
+export function Navbar() {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <nav className="fixed top-0 inset-x-0 z-50 bg-[#191c1f]/95 backdrop-blur border-b border-white/10">
+      <div className="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between">
+        <Link
+          href="/"
+          className="font-display font-extrabold text-white text-xl tracking-tight"
+        >
+          Go<span className="text-[#f3cc20]">Direct</span>247
+        </Link>
+
+        <div className="hidden md:flex items-center gap-8 text-sm font-medium">
+          <Link href="/#plans" className="text-white/60 hover:text-white transition-colors">
+            Plans
+          </Link>
+          <Link href="/#how-it-works" className="text-white/60 hover:text-white transition-colors">
+            How it works
+          </Link>
+          <Link href="/#benefits" className="text-white/60 hover:text-white transition-colors">
+            Benefits
+          </Link>
+        </div>
+
+        <div className="hidden md:flex items-center gap-3">
+          <Link
+            href="/dashboard"
+            className="text-white/70 hover:text-white text-sm font-medium px-4 py-2"
+          >
+            Login
+          </Link>
+          <Link
+            href="/signup"
+            className="bg-[#f3cc20] text-[#191c1f] text-sm font-bold px-5 py-2.5 rounded-full hover:bg-[#c9a800] transition-colors"
+          >
+            Get Started
+          </Link>
+        </div>
+
+        <button
+          onClick={() => setOpen(!open)}
+          className="md:hidden text-white p-1"
+          aria-label="Toggle menu"
+        >
+          {open ? <X size={24} weight="bold" /> : <List size={24} weight="bold" />}
+        </button>
+      </div>
+
+      {open && (
+        <div className="md:hidden bg-[#191c1f] border-t border-white/10 px-5 py-5 flex flex-col gap-4 text-sm">
+          <Link href="/#plans" onClick={() => setOpen(false)} className="text-white/70 py-1">
+            Plans
+          </Link>
+          <Link
+            href="/#how-it-works"
+            onClick={() => setOpen(false)}
+            className="text-white/70 py-1"
+          >
+            How it works
+          </Link>
+          <Link href="/#benefits" onClick={() => setOpen(false)} className="text-white/70 py-1">
+            Benefits
+          </Link>
+          <div className="border-t border-white/10 pt-4 flex flex-col gap-3">
+            <Link
+              href="/dashboard"
+              onClick={() => setOpen(false)}
+              className="text-white/70 py-1 text-center"
+            >
+              Login
+            </Link>
+            <Link
+              href="/signup"
+              onClick={() => setOpen(false)}
+              className="bg-[#f3cc20] text-[#191c1f] font-bold py-3 rounded-full text-center"
+            >
+              Get Started
+            </Link>
+          </div>
+        </div>
+      )}
+    </nav>
+  );
+}

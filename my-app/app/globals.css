@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+@theme inline {
+  --color-background: #191c1f;
+  --color-foreground: #ffffff;
+  --color-dark: #191c1f;
+  --color-gold: #f3cc20;
+  --color-gold-dark: #c9a800;
+  --color-brand: #0682b4;
+  --color-surface: #f4f4f4;
+  --color-teal: #00a87e;
+  --color-danger: #e23b4a;
+  --color-muted: #8d969e;
+  --color-slate: #505a63;
+  --font-display: 'Plus Jakarta Sans', sans-serif;
+  --font-sans: 'Inter', sans-serif;
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: #191c1f;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-display {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.ani1 { animation: fadeUp .6s ease 0s both; }
+.ani2 { animation: fadeUp .6s ease .1s both; }
+.ani3 { animation: fadeUp .6s ease .2s both; }
+.ani4 { animation: fadeUp .6s ease .3s both; }
+.ani5 { animation: fadeUp .6s ease .45s both; }
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #f3cc20;
+}
